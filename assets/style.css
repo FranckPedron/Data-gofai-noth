@@ -1,0 +1,213 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 1%;
+    box-sizing: border-box;
+    font-family: Montaga, sans-serif;
+    font-size: .864vw;
+    background: transparent url(images/background.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.player-area {
+    height: 49%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(33, 33, 33, .4);
+}
+
+.player-area#enemy-area {
+    flex-direction: column-reverse;
+}
+
+.player-area .defense, .player-area .bulwark {
+    background: url(images/defense.jpg) no-repeat center;
+    background-size: cover;
+    color: darkgoldenrod;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height .5s;
+    font-size: 12pt;
+}
+
+.player-area .bulwark {
+    background-image: url(images/bulwark.jpg);
+    color: darkblue;
+}
+
+.player-area .resources {
+    font-size: 1.2em;
+    background: url(images/resources_panel.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-area .resources .resource {
+    padding: .4em 2em;
+}
+
+.player-area .resources .sentinels {
+    color: darkred;
+}
+
+.player-area .resources .workers {
+    color: darkblue;
+}
+
+.player-area .resources .attackers {
+    color: darkgreen;
+}
+
+.player-area .resources .resource .units::before {
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-size: 25px 25px;
+    content: '';
+    vertical-align: bottom;
+    padding-right: .3em;
+}
+
+.player-area .resources .sentinels .units::before {
+    background-image: url(images/sentinels.png);
+}
+
+.player-area .resources .workers .units::before {
+    background-image: url(images/workers.png);
+
+}
+
+.player-area .resources .attackers .units::before {
+    background-image: url(images/attackers.png);
+
+}
+
+.player-area .deck {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-area .deck .card {
+    width: 10.5vw;
+    height: 15vw;
+    padding: .7%;
+    background-color: #0f1421;
+    border-radius: 2%;
+    box-sizing: border-box;
+}
+
+.card-area {
+    border: 2px solid #b4864f;
+    position: relative;
+    height: 98.6%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.player-area .deck .card.sentinels .card-area {
+    background-image: url(images/sentinels-bg-lc.png);
+}
+
+.player-area .deck .card.workers .card-area {
+    background-image: url(images/workers-bg-lc.png);
+}
+
+.player-area .deck .card.soldiers .card-area {
+    background-image: url(images/soldiers-bg-lc.png);
+}
+
+.card-cost {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: #0f1421;
+    color: wheat;
+    padding: 0 0 .4em .4em;
+    border-bottom-left-radius: 75%;
+    height: 1.5em;
+    width: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: .9em;
+    border: 2px solid #b4864f;
+    border-width: 0 0 2px 2px;
+    letter-spacing: -1px;
+}
+
+.sentinels .card-cost {
+    border-color: darkred;
+}
+
+.soldiers .card-cost {
+    border-color: darkgreen;
+}
+
+.workers .card-cost {
+    border-color: darkblue;
+}
+
+.card-title {
+    margin: 0;
+    font-weight: normal;
+    background-color: #6c6964;
+    color: white;
+    padding: .2em 1.5em .1em .2em;
+    font-size: .95em;
+    line-height: 1.1em;
+    border-bottom: .1em solid #96938f;
+}
+
+.clipper {
+    height: 65%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.card-illustration {
+    width: 100%;
+}
+
+.card-effect {
+    padding: .3em .4em;
+    margin: 0;
+    background-color: #c7c4ca;
+    font-style: italic;
+    height: 25%;
+}
+
+body.debug #enemy-area .card-area {
+    visibility: visible;
+}
+
+#enemy-area .card-area {
+    visibility: hidden;
+}
+
+body.debug #enemy-area .card.playing .card-area {
+    transform: scale(1.2);
+}
+
+#enemy-area .card.playing .card-area {
+    visibility: visible;
+}
+
+#enemy-area .card {
+    background: #0f1421 url(images/wesnoth-icon.png) no-repeat center;
+}
