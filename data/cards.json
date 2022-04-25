@@ -1,0 +1,1483 @@
+[
+    {
+        "reference": "b0",
+        "name": "Failed summoning",
+        "text": "both players lose 8 sentinels",
+        "effects": [
+            {
+                "player": {
+                    "sentinels": -8
+                }
+            },
+            {
+                "opponent": {
+                    "sentinels": -8
+                }
+            }
+        ],
+        "cost": {
+            "sentinels": 0
+        }
+    },
+    {
+        "reference": "b1",
+        "name": "Dwarven helpers",
+        "text": "+ 2 sentinels and workers, play again",
+        "effects": {
+            "player": {
+                "sentinels": 2,
+                "workers": 2
+            }
+        },
+        "cost": {
+            "sentinels": 0
+        },
+        "playagain": true
+    },
+    {
+        "reference": "b2",
+        "name": "New forge",
+        "text": "+1 defense, play again",
+        "effects": {
+            "player": {
+                "defense": 1
+            }
+        },
+        "cost": {
+            "sentinels": 1
+        },
+        "playagain": true
+    },
+    {
+        "reference": "b3",
+        "name": "Drakes recruits",
+        "text": "+1 garrison",
+        "effects": {
+            "player": {
+                "garrison": 1
+            }
+        },
+        "cost": {
+            "sentinels": 3
+        }
+    },
+    {
+        "reference": "b4",
+        "name": "War efforts",
+        "text": "if you have less garrisons, +2 garrisons, else +1",
+        "effects": {
+            "if": {
+                "greaterthan": [
+                    {
+                        "opponent": "garrison"
+                    },
+                    {
+                        "player": "garrison"
+                    }
+                ]
+            },
+            "then": {
+                "player": {
+                    "garrison": 2
+                }
+            },
+            "else": {
+                "player": {
+                    "garrison": 1
+                }
+            }
+        },
+        "cost": {
+            "sentinels": 4
+        }
+    },
+    {
+        "reference": "b5",
+        "name": "Elven blessing",
+        "text": "+4 defense, +1 garrison",
+        "effects": {
+            "player": {
+                "defense": 4,
+                "garrison": 1
+            }
+        },
+        "cost": {
+            "sentinels": 7
+        }
+    },
+    {
+        "reference": "b6",
+        "name": "Work Overtime",
+        "text": "+5 defense, -6 workers",
+        "effects": {
+            "player": {
+                "defense": 5,
+                "workers": 6
+            }
+        },
+        "cost": {
+            "sentinels": 7
+        }
+    },
+    {
+        "reference": "b7",
+        "name": "Magical equity",
+        "text": "if enemy has more garrisons, get the difference",
+        "effects": {
+            "if": {
+                "greaterthan": [
+                    {
+                        "opponent": "garrison"
+                    },
+                    {
+                        "player": "garrison"
+                    }
+                ]
+            },
+            "then": {
+                "player": {
+                    "replace": {
+                        "garrison": {
+                            "opponent": "garrison"
+                        }
+                    }
+                }
+            },
+            "else": {
+                "player": {
+                    "garrison": 0
+                }
+            }
+        },
+        "cost": {
+            "sentinels": 5
+        }
+    },
+    {
+        "reference": "b8",
+        "name": "Basic training",
+        "text": "+3 defense",
+        "effects": {
+            "player": {
+                "defense": 3
+            }
+        },
+        "cost": {
+            "sentinels": 2
+        }
+    },
+    {
+        "reference": "b9",
+        "name": "Heavy training",
+        "text": "+4 defense",
+        "effects": {
+            "player": {
+                "defense": 4
+            }
+        },
+        "cost": {
+            "sentinels": 3
+        }
+    },
+    {
+        "reference": "b10",
+        "name": "Merfolk helpers",
+        "text": "+1 garrison to both players, +4 workers",
+        "effects": [
+            {
+                "player": {
+                    "garrison": 1,
+                    "workers": 4
+                }
+            },
+            {
+                "opponent": {
+                    "garrison": 1
+                }
+            }
+        ],
+        "cost": {
+            "sentinels": 2
+        }
+    },
+    {
+        "reference": "b11",
+        "name": "Goblin freelancers",
+        "text": "+6 defense if you don't have any, +3 else",
+        "effects": {
+            "if": {
+                "greaterthan": [
+                    {
+                        "player": "defense"
+                    },
+                    0
+                ]
+            },
+            "then": {
+                "player": {
+                    "defense": 3
+                }
+            },
+            "else": {
+                "player": {
+                    "defense": 6
+                }
+            }
+        },
+        "cost": {
+            "sentinels": 3
+        }
+    },
+    {
+        "reference": "b12",
+        "name": "Disease",
+        "text": "both defenses take 5 damage, play again",
+        "effects": [
+            {
+                "player": {
+                    "defense": -5
+                }
+            },
+            {
+                "opponent": {
+                    "defense": -5
+                }
+            }
+        ],
+        "cost": {
+            "sentinels": 7
+        },
+        "playagain": true
+    },
+    {
+        "reference": "b13",
+        "name": "Regrouping",
+        "text": "+1 guild, play again",
+        "effects": {
+            "player": {
+                "guild": 1
+            }
+        },
+        "cost": {
+            "sentinels": 8
+        },
+        "playagain": true
+    },
+    {
+        "reference": "b14",
+        "name": "Bad day",
+        "text": "-1 garrison to both players",
+        "effects": [
+            {
+                "player": {
+                    "garrison": -1
+                }
+            },
+            {
+                "opponent": {
+                    "garrison": -1
+                }
+            }
+        ],
+        "cost": {
+            "sentinels": 0
+        }
+    },
+    {
+        "reference": "b15",
+        "name": "Heavy armors",
+        "text": "+6 defense",
+        "effects": {
+            "player": {
+                "defense": 6
+            }
+        },
+        "cost": {
+            "sentinels": 5
+        }
+    },
+    {
+        "reference": "b16",
+        "name": "Wall smasher",
+        "text": "-1 enemy garrison",
+        "effects": {
+            "opponent": {
+                "garrison": -1
+            }
+        },
+        "cost": {
+            "sentinels": 4
+        }
+    },
+    {
+        "reference": "b17",
+        "name": "Drake trainer",
+        "text": "+2 garrisons",
+        "effects": {
+            "player": {
+                "garrison": 2
+            }
+        },
+        "cost": {
+            "sentinels": 6
+        }
+    },
+    {
+        "reference": "b18",
+        "name": "Equilibrium",
+        "text": "-1 garrison, +10 defense and +5 workers",
+        "effects": {
+            "player": {
+                "garrison": -1,
+                "defense": 10,
+                "workers": 5
+            }
+        },
+        "cost": {
+            "sentinels": 0
+        }
+    },
+    {
+        "reference": "b19",
+        "name": "Long-range defense",
+        "text": "+8 defense",
+        "effects": {
+            "player": {
+                "defense": 8
+            }
+        },
+        "cost": {
+            "sentinels": 8
+        }
+    },
+    {
+        "reference": "b20",
+        "name": "Reservists",
+        "text": "+5 defense, +1 barracks",
+        "effects": {
+            "player": {
+                "defense": 5,
+                "barracks": 1
+            }
+        },
+        "cost": {
+            "sentinels": 9
+        }
+    },
+    {
+        "reference": "b21",
+        "name": "Orcish grunts",
+        "text": "+7 defense and 7 workers",
+        "effects": {
+            "player": {
+                "defense": 7,
+                "workers": 7
+            }
+        },
+        "cost": {
+            "sentinels": 9
+        }
+    },
+    {
+        "reference": "b22",
+        "name": "Building with fire",
+        "text": "+6 defense, +3 bulwark",
+        "effects": {
+            "player": {
+                "defense": 6,
+                "bulwark": 3
+            }
+        },
+        "cost": {
+            "sentinels": 11
+        }
+    },
+    {
+        "reference": "b23",
+        "name": "Naga hunters",
+        "text": "+12 defense",
+        "effects": {
+            "player": {
+                "defense": 12
+            }
+        },
+        "cost": {
+            "sentinels": 13
+        }
+    },
+    {
+        "reference": "b24",
+        "name": "Nature's help",
+        "text": "+8 defense, +5 bulwark",
+        "effects": {
+            "player": {
+                "defense": 8,
+                "bulwark": 5
+            }
+        },
+        "cost": {
+            "sentinels": 15
+        }
+    },
+    {
+        "reference": "b25",
+        "name": "Elven rangers",
+        "text": "+15 defense",
+        "effects": {
+            "player": {
+                "defense": 15
+            }
+        },
+        "cost": {
+            "sentinels": 16
+        }
+    },
+    {
+        "reference": "b26",
+        "name": "Mudcrawlers",
+        "text": "+6 defense, 10 damage to enemy",
+        "effects": [
+            {
+                "player": {
+                    "defense": 6
+                }
+            },
+            {
+                "opponent": {
+                    "damage": 10
+                }
+            }
+        ],
+        "cost": {
+            "sentinels": 18
+        }
+    },
+    {
+        "reference": "b27",
+        "name": "Buffed woses",
+        "text": "+20 defense, +8 bulwark",
+        "effects": {
+            "player": {
+                "defense": 20,
+                "bulwark": 8
+            }
+        },
+        "cost": {
+            "sentinels": 24
+        }
+    },
+    {
+        "reference": "b28",
+        "name": "Troll rocklobbers",
+        "text": "+9 defense, -5 soldiers",
+        "effects": {
+            "player": {
+                "defense": 9,
+                "soldiers": -5
+            }
+        },
+        "cost": {
+            "sentinels": 7
+        }
+    },
+    {
+        "reference": "g0",
+        "name": "Whelp",
+        "text": "+1 bulwark, play again",
+        "effects": {
+            "player": {
+                "bulwark": 1
+            }
+        },
+        "cost": {
+            "workers": 1
+        },
+        "playagain": true
+    },
+    {
+        "reference": "g1",
+        "name": "Troll shaman",
+        "text": "1 damage to enemy bulwark, play again",
+        "effects": {
+            "opponent": {
+                "bulwark": -1
+            }
+        },
+        "cost": {
+            "workers": 2
+        },
+        "playagain": true
+    },
+    {
+        "reference": "g2",
+        "name": "Stone hardener",
+        "text": "+3 bulwark",
+        "effects": {
+            "player": {
+                "bulwark": 3
+            }
+        },
+        "cost": {
+            "workers": 2
+        }
+    },
+    {
+        "reference": "g3",
+        "name": "Influence boost",
+        "text": "+1 guild",
+        "effects": {
+            "player": {
+                "guild": 1
+            }
+        },
+        "cost": {
+            "workers": 3
+        }
+    },
+    {
+        "reference": "g4",
+        "name": "Soil enrichment",
+        "text": "draw then discard 1 card, play again",
+        "effects": {},
+        "cost": {
+            "workers": 2
+        },
+        "forcediscard": true
+    },
+    {
+        "reference": "g5",
+        "name": "Stubborn grunts",
+        "text": "+3 bulwark, magnet",
+        "effects": {
+            "player": {
+                "bulwark": 3
+            }
+        },
+        "cost": {
+            "workers": 5
+        },
+        "magnet": true
+    },
+    {
+        "reference": "g6",
+        "name": "Runic flare",
+        "text": "+2 bulwark, -2 bulwark to enemy",
+        "effects": [
+            {
+                "player": {
+                    "bulwark": 2
+                }
+            },
+            {
+                "opponent": {
+                    "bulwark": -2
+                }
+            }
+        ],
+        "cost": {
+            "workers": 4
+        }
+    },
+    {
+        "reference": "g7",
+        "name": "Dark informant",
+        "text": "+1 guild, +3 bulwark, +1 enemy bulwark",
+        "effects": [
+            {
+                "player": {
+                    "guild": 1,
+                    "bulwark": 3
+                }
+            },
+            {
+                "opponent": {
+                    "bulwark": 1
+                }
+            }
+        ],
+        "cost": {
+            "workers": 6
+        }
+    },
+    {
+        "reference": "g8",
+        "name": "Brittle materials",
+        "text": "3 damage to enemy bulwark",
+        "effects": {
+            "opponent": {
+                "bulwark": -3
+            }
+        },
+        "cost": {
+            "workers": 2
+        }
+    },
+    {
+        "reference": "g9",
+        "name": "Overnight efforts",
+        "text": "+5 bulwark",
+        "effects": {
+            "player": {
+                "bulwark": 5
+            }
+        },
+        "cost": {
+            "workers": 3
+        }
+    },
+    {
+        "reference": "g10",
+        "name": "Lost shipment",
+        "text": "5 damage to enemy bulwark",
+        "effects": {
+            "opponent": {
+                "bulwark": -5
+            }
+        },
+        "cost": {
+            "workers": 4
+        }
+    },
+    {
+        "reference": "g11",
+        "name": "Sacrifices",
+        "text": "5 damage to your bulwark, +2 guild",
+        "effects": {
+            "player": {
+                "bulwark": -5,
+                "guild": 2
+            }
+        },
+        "cost": {
+            "workers": 3
+        }
+    },
+    {
+        "reference": "g12",
+        "name": "New guildmaster",
+        "text": "+1 guild, +3 bulwark, +3 defense",
+        "effects": {
+            "player": {
+                "guild": 1,
+                "bulwark": 3,
+                "defense": 3
+            }
+        },
+        "cost": {
+            "workers": 7
+        }
+    },
+    {
+        "reference": "g13",
+        "name": "Truce",
+        "text": "both players' guild equal the largest guild",
+        "effects": [
+            {
+                "@store": {
+                    "max": [
+                        {
+                            "player": "guild"
+                        },
+                        {
+                            "opponent": "guild"
+                        }
+                    ]
+                }
+            },
+            {
+                "opponent": {
+                    "replace": {
+                        "guild": "@store"
+                    }
+                }
+            },
+            {
+                "player": {
+                    "replace": {
+                        "guild": "@store"
+                    }
+                }
+            }
+        ],
+        "cost": {
+            "workers": 7
+        }
+    },
+    {
+        "reference": "g14",
+        "name": "Fruition",
+        "text": "+8 bulwark",
+        "effects": {
+            "player": {
+                "bulwark": 8
+            }
+        },
+        "cost": {
+            "workers": 6
+        }
+    },
+    {
+        "reference": "g15",
+        "name": "Help from the woods",
+        "text": "+5 bulwark, +1 guild",
+        "effects": {
+            "player": {
+                "bulwark": 5,
+                "guild": 1
+            }
+        },
+        "cost": {
+            "workers": 9
+        }
+    },
+    {
+        "reference": "g16",
+        "name": "Hope breaker",
+        "text": "-1 guild, 9 damage to enemy bulwark",
+        "effects": [
+            {
+                "player": {
+                    "guild": -1
+                }
+            },
+            {
+                "opponent": {
+                    "bulwark": -9
+                }
+            }
+        ],
+        "cost": {
+            "workers": 8
+        }
+    },
+    {
+        "reference": "g17",
+        "name": "Troll attack",
+        "text": "+5 bulwark, -6 sentinels to enemy",
+        "effects": [
+            {
+                "player": {
+                    "bulwark": 5
+                }
+            },
+            {
+                "opponent": {
+                    "sentinels": -6
+                }
+            }
+        ],
+        "cost": {
+            "workers": 7
+        }
+    },
+    {
+        "reference": "g18",
+        "name": "Magical hardening",
+        "text": "+11 bulwark",
+        "effects": {
+            "player": {
+                "bulwark": 11
+            }
+        },
+        "cost": {
+            "workers": 10
+        }
+    },
+    {
+        "reference": "g19",
+        "name": "Unforeseen events",
+        "text": "7 damage and -1 guild to both bulwarks",
+        "effects": [
+            {
+                "player": {
+                    "bulwark": -7,
+                    "guild": -1
+                }
+            },
+            {
+                "opponent": {
+                    "bulwark": -7,
+                    "guild": -1
+                }
+            }
+        ],
+        "cost": {
+            "workers": 5
+        }
+    },
+    {
+        "reference": "g20",
+        "name": "Divine lightning",
+        "text": "+6 bulwark, -4 bulwark to enemy",
+        "effects": [
+            {
+                "player": {
+                    "bulwark": 6
+                }
+            },
+            {
+                "opponent": {
+                    "bulwark": -4
+                }
+            }
+        ],
+        "cost": {
+            "workers": 13
+        }
+    },
+    {
+        "reference": "g21",
+        "name": "Garrison dispatch",
+        "text": "+7 bulwark, -10 sentinels",
+        "effects": {
+            "player": {
+                "bulwark": 7,
+                "sentinels": -10
+            }
+        },
+        "cost": {
+            "workers": 4
+        }
+    },
+    {
+        "reference": "g22",
+        "name": "Leaf shield",
+        "text": "+8 bulwark, +3 defense",
+        "effects": {
+            "player": {
+                "bulwark": 8,
+                "defense": 3
+            }
+        },
+        "cost": {
+            "workers": 12
+        }
+    },
+    {
+        "reference": "g23",
+        "name": "Harmonizer",
+        "text": "+8 bulwark, +1 barracks",
+        "effects": {
+            "player": {
+                "bulwark": 8,
+                "barracks": 1
+            }
+        },
+        "cost": {
+            "workers": 14
+        }
+    },
+    {
+        "reference": "g24",
+        "name": "Archmages",
+        "text": "+15 bulwark",
+        "effects": {
+            "player": {
+                "bulwark": 15
+            }
+        },
+        "cost": {
+            "workers": 16
+        }
+    },
+    {
+        "reference": "g25",
+        "name": "Fire sanctuary",
+        "text": "+10 bulwark, +5 defense, +5 soldiers",
+        "effects": {
+            "player": {
+                "bulwark": 10,
+                "defense": 5,
+                "soldiers": 5
+            }
+        },
+        "cost": {
+            "workers": 15
+        }
+    },
+    {
+        "reference": "g26",
+        "name": "Chaos imbalance",
+        "text": "+12 bulwark, -6 bulwark to enemy",
+        "effects": [
+            {
+                "player": {
+                    "bulwark": 12
+                }
+            },
+            {
+                "opponent": {
+                    "bulwark": -6
+                }
+            }
+        ],
+        "cost": {
+            "workers": 17
+        }
+    },
+    {
+        "reference": "g27",
+        "name": "Elven guildmaster",
+        "text": "+20 bulwark",
+        "effects": {
+            "player": {
+                "bulwark": 20
+            }
+        },
+        "cost": {
+            "workers": 21
+        }
+    },
+    {
+        "reference": "g28",
+        "name": "Natural cycle",
+        "text": "+11 bulwark, -6 defense",
+        "effects": {
+            "player": {
+                "bulwark": 11,
+                "defense": -6
+            }
+        },
+        "cost": {
+            "workers": 8
+        }
+    },
+    {
+        "reference": "m0",
+        "name": "Call of the Undead",
+        "text": "both players lose 6 soldiers",
+        "effects": [
+            {
+                "player": {
+                    "soldiers": -6
+                }
+            },
+            {
+                "opponent": {
+                    "soldiers": -6
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 0
+        }
+    },
+    {
+        "reference": "m1",
+        "name": "Merfolk fighters",
+        "text": "2 damage",
+        "effects": {
+            "opponent": {
+                "damage": 2
+            }
+        },
+        "cost": {
+            "soldiers": 1
+        },
+        "playagain": true
+    },
+    {
+        "reference": "m2",
+        "name": "Whimsical ogre",
+        "text": "4 damage but he eats 3 workers",
+        "effects": [
+            {
+                "opponent": {
+                    "damage": 4
+                }
+            },
+            {
+                "player": {
+                    "workers": -3
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 1
+        }
+    },
+    {
+        "reference": "m3",
+        "name": "Merfolk commander",
+        "text": "+1 barracks",
+        "effects": {
+            "player": {
+                "barracks": 1
+            }
+        },
+        "cost": {
+            "soldiers": 3
+        }
+    },
+    {
+        "reference": "m4",
+        "name": "Wilderness scout",
+        "text": "draw then discard 1 card, play again",
+        "effects": {},
+        "cost": {
+            "soldiers": 2
+        },
+        "forcediscard": true
+    },
+    {
+        "reference": "m5",
+        "name": "Undead help",
+        "text": "6 damage but you take 3 as well",
+        "effects": [
+            {
+                "opponent": {
+                    "damage": 6
+                }
+            },
+            {
+                "player": {
+                    "damage": 3
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 3
+        }
+    },
+    {
+        "reference": "m6",
+        "name": "Bane archers",
+        "text": "3 damage to enemy bulwark, 1 damage to you",
+        "effects": [
+            {
+                "opponent": {
+                    "bulwark": -3
+                }
+            },
+            {
+                "player": {
+                    "damage": 1
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 4
+        }
+    },
+    {
+        "reference": "m7",
+        "name": "Ghost summoning",
+        "text": "2 damage to enemy bulwark, play again",
+        "effects": {
+            "opponent": {
+                "bulwark": -2
+            }
+        },
+        "cost": {
+            "soldiers": 6
+        },
+        "playagain": true
+    },
+    {
+        "reference": "m8",
+        "name": "Merfolk hoplite",
+        "text": "5 damage",
+        "effects": {
+            "opponent": {
+                "damage": 5
+            }
+        },
+        "cost": {
+            "soldiers": 3
+        }
+    },
+    {
+        "reference": "m9",
+        "name": "Dragonguard",
+        "text": "4 damage, +3 defense",
+        "effects": [
+            {
+                "opponent": {
+                    "damage": 4
+                }
+            },
+            {
+                "player": {
+                    "defense": 3
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 5
+        }
+    },
+    {
+        "reference": "m10",
+        "name": "Saurian skirmisher",
+        "text": "4 damage to enemy bulwark",
+        "effects": {
+            "opponent": {
+                "bulwark": -4
+            }
+        },
+        "cost": {
+            "soldiers": 6
+        }
+    },
+    {
+        "reference": "m11",
+        "name": "Undead commander",
+        "text": "+2 barracks",
+        "effects": {
+            "player": {
+                "barracks": 2
+            }
+        },
+        "cost": {
+            "soldiers": 7
+        }
+    },
+    {
+        "reference": "m12",
+        "name": "Dwarven ulfserker",
+        "text": "2 damage, +4 defense, +2 bulwark",
+        "effects": [
+            {
+                "opponent": {
+                    "damage": 2
+                }
+            },
+            {
+                "player": {
+                    "defense": 4,
+                    "bulwark": 2
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 8
+        }
+    },
+    {
+        "reference": "m13",
+        "name": "Full moon rituals",
+        "text": "+1 barracks to both players, +3 soldiers",
+        "effects": [
+            {
+                "opponent": {
+                    "barracks": 1
+                }
+            },
+            {
+                "player": {
+                    "barracks": 1,
+                    "soldiers": 3
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 0
+        }
+    },
+    {
+        "reference": "m14",
+        "name": "Merfolk hunter",
+        "text": "6 damage",
+        "effects": {
+            "opponent": {
+                "damage": 6
+            }
+        },
+        "cost": {
+            "soldiers": 5
+        }
+    },
+    {
+        "reference": "m15",
+        "name": "Wraith",
+        "text": "7 damage",
+        "effects": {
+            "opponent": {
+                "damage": 7
+            }
+        },
+        "cost": {
+            "soldiers": 6
+        }
+    },
+    {
+        "reference": "m16",
+        "name": "Rabid bat",
+        "text": "6 damage, -3 soldiers to enemy",
+        "effects": {
+            "opponent": {
+                "damage": 6,
+                "soldiers": -3
+            }
+        },
+        "cost": {
+            "soldiers": 6
+        }
+    },
+    {
+        "reference": "m17",
+        "name": "Zombie gryphon",
+        "text": "6 damage, both players lose 5 of each resource",
+        "effects": [
+            {
+                "opponent": {
+                    "damage": 6,
+                    "sentinels": -5,
+                    "workers": -5,
+                    "soldiers": -5
+                }
+            },
+            {
+                "player": {
+                    "sentinels": -5,
+                    "workers": -5,
+                    "soldiers": -5
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 5
+        }
+    },
+    {
+        "reference": "m18",
+        "name": "Ghoul",
+        "text": "if the enemy has no defense, 10 damage, else 6 damage",
+        "effects": {
+            "if": {
+                "greaterthan": [
+                    {
+                        "opponent": "defense"
+                    },
+                    0
+                ]
+            },
+            "then": {
+                "opponent": {
+                    "damage": 6
+                }
+            },
+            "else": {
+                "opponent": {
+                    "damage": 10
+                }
+            }
+        },
+        "cost": {
+            "soldiers": 8
+        }
+    },
+    {
+        "reference": "m19",
+        "name": "Night shades",
+        "text": "9 damage",
+        "effects": {
+            "opponent": {
+                "damage": 9
+            }
+        },
+        "cost": {
+            "soldiers": 9
+        }
+    },
+    {
+        "reference": "m20",
+        "name": "Doom spreader",
+        "text": "if the enemy has a defense, 10 damage, else 7 damage",
+        "effects": {
+            "if": {
+                "greaterthan": [
+                    {
+                        "opponent": "defense"
+                    },
+                    0
+                ]
+            },
+            "then": {
+                "opponent": {
+                    "damage": 10
+                }
+            },
+            "else": {
+                "opponent": {
+                    "damage": 7
+                }
+            }
+        },
+        "cost": {
+            "soldiers": 11
+        }
+    },
+    {
+        "reference": "m21",
+        "name": "Grand knight",
+        "text": "if your guild is superior, 12 damage, else 8 damage",
+        "effects": {
+            "if": {
+                "greaterthan": [
+                    {
+                        "player": "guild"
+                    },
+                    {
+                        "opponent": "guild"
+                    }
+                ]
+            },
+            "then": {
+                "opponent": {
+                    "damage": 12
+                }
+            },
+            "else": {
+                "opponent": {
+                    "damage": 8
+                }
+            }
+        },
+        "cost": {
+            "soldiers": 9
+        }
+    },
+    {
+        "reference": "m22",
+        "name": "Zombie riders",
+        "text": "6 damage : if your defense is bigger, damage bulwark",
+        "effects": {
+            "if": {
+                "greaterthan": [
+                    {
+                        "player": "defense"
+                    },
+                    {
+                        "opponent": "defense"
+                    }
+                ]
+            },
+            "then": {
+                "opponent": {
+                    "bulwark": -6
+                }
+            },
+            "else": {
+                "opponent": {
+                    "damage": 6
+                }
+            }
+        },
+        "cost": {
+            "soldiers": 10
+        }
+    },
+    {
+        "reference": "m23",
+        "name": "Ancient hero",
+        "text": "5 damage to enemy bulwark, -8 soldiers to enemy",
+        "effects": {
+            "opponent": {
+                "bulwark": -5,
+                "soldiers": -8
+            }
+        },
+        "cost": {
+            "soldiers": 14
+        }
+    },
+    {
+        "reference": "m24",
+        "name": "Night terror",
+        "text": "8 damage, -1 enemy garrison",
+        "effects": {
+            "opponent": {
+                "damage": 8,
+                "garrison": -1
+            }
+        },
+        "cost": {
+            "soldiers": 11
+        }
+    },
+    {
+        "reference": "m25",
+        "name": "Plunderer",
+        "text": "-10 enemy workers, -5 enemy sentinels, get half of it",
+        "effects": [
+            {
+                "@store": {
+                    "opponent": {
+                        "workers": -10
+                    }
+                }
+            },
+            {
+                "player": {
+                    "workers": "-@store/2"
+                }
+            },
+            {
+                "@store": {
+                    "opponent": {
+                        "sentinels": -5
+                    }
+                }
+            },
+            {
+                "player": {
+                    "sentinels": "-@store/2"
+                }
+            }
+        ],
+        "cost": {
+            "workers": 12
+        }
+    },
+    {
+        "reference": "m26",
+        "name": "Bravery",
+        "text": "10 damage, +4 defense",
+        "effects": [
+            {
+                "opponent": {
+                    "damage": 10
+                }
+            },
+            {
+                "player": {
+                    "defense": 4
+                }
+            }
+        ],
+        "cost": {
+            "soldiers": 15
+        }
+    },
+    {
+        "reference": "m27",
+        "name": "Troll destroyer",
+        "text": "10 damage, -5 enemy soldiers, -1 enemy barracks",
+        "effects": {
+            "opponent": {
+                "damage": 10,
+                "soldiers": -5,
+                "barracks": -1
+            }
+        },
+        "cost": {
+            "soldiers": 17
+        }
+    },
+    {
+        "reference": "m28",
+        "name": "Orcs invasion",
+        "text": "20 damage, -10 enemy workers, -1 enemy barracks",
+        "effects": {
+            "opponent": {
+                "damage": 20,
+                "workers": -10,
+                "barracks": -1
+            }
+        },
+        "cost": {
+            "soldiers": 25
+        }
+    }
+]
